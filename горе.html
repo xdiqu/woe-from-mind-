@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Горе от ума - Монолог Чацкого</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black; /* Цвет фона черный */
+            color: #D6CDAF; /* Тепло-бежевый цвет текста */
+            text-align: center;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+            line-height: 1; /* Практически отсутствующий междустрочный интервал */
+            font-weight: 600; /* Увеличена толщина текста */
+            font-size: 16px; /* Начальный размер шрифта */
+        }
+        .verse {
+            margin: 5px 0; /* Уменьшен отступ между четверостишиями */
+        }
+        .color-toggle {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .color-box {
+            width: 60px; /* Увеличен размер квадратиков */
+            height: 60px; /* Увеличен размер квадратиков */
+            margin: 0; /* Убраны отступы между квадратиками */
+            cursor: pointer;
+            border: 1px solid #000; /* Черная обводка для цветных квадратиков */
+        }
+        .black {
+            background-color: black;
+        }
+        .white {
+            background-color: white;
+        }
+        .change-font {
+            width: 60px;
+            height: 60px;
+            margin: 0 5px; /* Отступы между кнопками */
+            cursor: pointer;
+            border: 1px solid white; /* Белая обводка для всех кнопок */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px; /* Размер текста на кнопках */
+        }
+        .increase {
+            background-color: white; /* Белый фон для кнопки + на черном фоне */
+            color: black; /* Черный текст на белом фоне */
+        }
+        .decrease {
+            background-color: black; /* Черный фон для кнопки - на белом фоне */
+            color: white; /* Белый текст на черном фоне */
+        }
+        .black-button {
+            border: 1px solid white; /* Белая обводка для кнопки изменения фона на черный */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="color-toggle">
+        <div class="color-box black black-button" onclick="changeColor('black')"></div>
+        <div class="change-font increase" onclick="changeFontSize(1)">+</div>
+        <div class="change-font decrease" onclick="changeFontSize(-1)">-</div>
+        <div class="color-box white" onclick="changeColor('white')"></div>
+    </div>
+
+    <h1>Монолог Чацкого</h1>
+    <div class="verse">А судьи кто? — За древностию лет <br> К свободной жизни их вражда непримирима, <br> Сужденья черпают из забытых газет <br> Времен Очаковских и покоренья Крыма;</div>
+    <div class="verse">Всегда готовые к журьбе, <br> Поют всё песнь одну и ту же, <br> Не замечая об себе: <br> Что старее, то хуже.</div>
+    <div class="verse">Где? укажите нам, отечества отцы, <br> Которых мы должны принять за образцы? <br> Не эти ли, грабительством богаты? <br> Защиту от суда в друзьях нашли, в родстве,</div>
+    <div class="verse">Великолепные соорудя палаты, <br> Где разливаются в пирах и мотовстве, <br> И где не воскресят клиенты-иностранцы <br> Прошедшего житья подлейшие черты.</div>
+    <div class="verse">Да и кому в Москве не зажимали рты <br> Обеды, ужины и танцы? <br> Не тот ли вы, к кому меня еще с пелён, <br> Для замыслов каких-то непонятных,</div>
+    <div class="verse">Дитёй возили на поклон? <br> Тот Нестор негодяев знатных, <br> Толпою окруженный слуг; <br> Усередствуя, они в часы вина и драки</div>
+    <div class="verse">И честь и жизнь его не раз спасали: вдруг <br> На них он выменил борзые три собаки!!! <br> Или вон тот еще, который для затей <br> На крепостной балет согнал на многих фурах</div>
+    <div class="verse">От матерей, отцов отторженных детей?! <br> Сам погружен умом в Зефирах и в Амурах, <br> Заставил всю Москву дивиться их красе! <br> Но должников не согласил к отсрочке:</div>
+    <div class="verse">Амуры и Зефиры все <br> Распроданы поодиночке!! <br> Вот те, которые дожили до седин! <br> Вот уважать кого должны мы на безлюдьи!</div>
+    <div class="verse">Вот наши строгие ценители и судьи! <br> Теперь пускай из нас один, <br> Из молодых людей, найдется — враг исканий, <br> Не требуя ни мест, ни повышенья в чин,</div>
+    <div class="verse">В науки он вперит ум, алчущий познаний; <br> К искусствам творческим, высоким и прекрасным, <br> Они тотчас: разбой! пожар! <br> И прослывет у них мечтателем! опасным!!—</div>
+    <div class="verse">Мундир! один мундир! Он в прежнем их быту <br> Когда-то укрывал, расшитый и красивый, <br> Их слабодушие, рассудка нищету; <br> И нам за ними в путь счастливый!</div>
+    <div class="verse">И в женах, дочерях — к мундиру та же страсть! <br> Я сам к нему давно ль от нежности отрекся?! <br> Теперь уж в это мне ребячество не впасть; <br> Но кто б тогда за всеми не повлекся?</div>
+    <div class="verse">Когда из гвардии, иные от двора <br> Сюда на время приезжали,— <br> Кричали женщины: ура! <br> И в воздух чепчики бросали!</div>
+
+    <script>
+        let brightness = 100; // Начальная яркость
+        let fontSize = 16; // Начальный размер шрифта
+
+        function changeColor(mode) {
+            if (mode === 'black') {
+                document.body.style.backgroundColor = 'black'; // Фон остается черным
+                document.body.style.color = '#D6CDAF'; // Цвет текста теплый бежевый
+                document.querySelector('.increase').style.backgroundColor = 'white'; // Кнопка + белая
+                document.querySelector('.increase').style.color = 'black'; // Текст кнопки + черный
+                document.querySelector('.decrease').style.backgroundColor = 'black'; // Кнопка - черная
+                document.querySelector('.decrease').style.color = 'white'; // Текст кнопки - белый
+            } else {
+                document.body.style.backgroundColor = 'white'; // Фон становится белым
+                document.body.style.color = 'black'; // Цвет текста на белом фоне
+                document.querySelector('.increase').style.backgroundColor = 'black'; // Кнопка + черная
+                document.querySelector('.increase').style.color = 'white'; // Текст кнопки + белый
+                document.querySelector('.decrease').style.backgroundColor = 'white'; // Кнопка - белая
+                document.querySelector('.decrease').style.color = 'black'; // Текст кнопки - черный
+            }
+        }
+
+        function changeFontSize(change) {
+            fontSize += change; // Увеличение или уменьшение размера шрифта
+            fontSize = Math.max(10, fontSize); // Ограничение минимального размера шрифта
+            document.body.style.fontSize = fontSize + 'px'; // Применение нового размера шрифта
+        }
+
+        // Обработчик событий для клавиш
+        window.addEventListener('keydown', function(event) {
+            if (event.key === '-') {
+                changeFontSize(-1); // Уменьшение шрифта
+            } else if (event.key === '=') {
+                changeFontSize(1); // Увеличение шрифта
+            }
+        });
+    </script>
+
+</body>
+</html>
